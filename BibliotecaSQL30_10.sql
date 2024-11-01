@@ -52,8 +52,11 @@ TO DISK = 'c:\sql\biblioteca1.bk';
 
 drop database BDTI46 -- APAGAR
 
+FOREIGN KEY >> chave estrangeira
 
 use master
+
+ variavel int UNIQUE (exemp cpf, dado unico)
 
 
 - Restaurar

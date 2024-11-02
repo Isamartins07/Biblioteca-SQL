@@ -1,8 +1,50 @@
 
+
+    /*
+ BACKUP DATABASE BibliotecaDB
+TO DISK = 'c:\sql\biblioteca1.bk';
+
+
+drop database BDTI46 -- APAGAR
+
+FOREIGN KEY >> chave estrangeira
+
+use master
+
+ variavel int UNIQUE (exemp cpf, dado unico)
+
+
+- Restaurar
+RESTORE DATABASE BDTI46
+FROM DISK ='c:\temp\bkp1.bk';
+
+*/
+	/*
+	Aula dia 30-10 - Exemplo de select com Inner Join
+ 
+select L.Titulo as Título, L.AnoPublicacao as 'Ano Publicação', A.NomeCompleto as 'Nome Completo',
+E.DataEmprestimo as 'Data Empréstimo', E. DataDevolucao as 'Data Devolução' 
+from Emprestimos E
+INNER JOIN Livros L on L.LivrosID = E.LivroID                         >>> MESCLA AS TABELAS/INFORMAÇÕES
+INNER JOIN Autores A on A.AutorID = L.AutorID
+
+INSERT INTO NOME DA ENTIDADE (AQUI INSERIR QUAL DADO VOCÊ VAI PREENCHER MAS SOMENTE SE NÃO PREENCHER TODO,É O JEITO DE ESPECIFICAR) VALUES
+
+UPDATE DA TABELA (SERVE PARA MUDAR ALGUM CAMPO DA TABELA)
+
+UPDATE AUTORES
+SET livroID  = 1
+WHERE (CONDIÇÃO EXEMPLO: EmprestimoID=2);
+
+DELETE FROM Autores
+WHERE AutorID= 1;
+
+
+
+*/
 create database EscolaCursos;
 
 use EscolaCursos;
-
 
 create table Curso(
  CursoID int identity primary key,
@@ -78,4 +120,4 @@ insert into Turma values
 select * from Turma
 
 
-
+-----------------------------------

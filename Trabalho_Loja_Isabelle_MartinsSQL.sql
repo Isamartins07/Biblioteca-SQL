@@ -1,7 +1,7 @@
 *
 USE MASTER
 
-DROP DATABASE LojaDB
+--DROP DATABASE LojaDB
 
 /*
 Exercício: Criação de um Banco de Dados 
@@ -33,13 +33,6 @@ create Table Produto (
 	CategoriaID int not null ,
 	foreign key (CategoriaID) references Categoria (CategoriaID),
 );
-
-
-
-
-
-
-
 
 
 
@@ -111,3 +104,4 @@ select * from Produto
 select * from Cliente
 select * from Pedido
 select * from ItemPedido
+

@@ -63,6 +63,44 @@ use master
 RESTORE DATABASE BDTI46
 FROM DISK ='c:\temp\bkp1.bk';
 
+
+
+-Alterando as tabelas e adicionando Foreign key
+
+ALTER TABLE emprestimos
+
+ADD FOREIGN KEY (LivroID) REFERENCES Livros(LivroID);
+ 
+ALTER TABLE LIVROS
+
+ADD FOREIGN KEY (AutorID) REFERENCES Autores(AutorID)
+ 
+-- Apagandoas tabelas
+
+ALTER TABLE emprestimos
+
+DROP CONSTRAINT FK__Emprestim__Livro__36B12243
+ 
+ALTER TABLE livros
+
+DROP CONSTRAINT FK__Livros__AutorID__35BCFE0A;
+ 
+ 
+--Alterando a tabela criando Foreign key com Constraint.
+
+ALTER TABLE emprestimos
+
+ADD CONSTRAINT FK_Emprestimos_Livros
+
+FOREIGN KEY (LivroID) REFERENCES Livros(LivroID);
+ 
+ALTER TABLE LIVROS
+
+ADD CONSTRAINT FK_LIVROS_AUTOR
+
+FOREIGN KEY (AutorID) REFERENCES Autores(AutorID)
+ 
+
 */
 
 -- comandos para inserir dados nas 3 entidades

@@ -104,5 +104,22 @@ FOREIGN KEY (AutorID) REFERENCES Autores(AutorID)
  select * from Especialidade
  select * from Consulta
 
+
+ -- UPDATE (ALTERAÇÃO)
  UPDATE Consulta
  SET MedicoID=9
+
+ -- DELETE (APAGAR TODOS)  EXEMPLO:
+ DELETE FROM  Medico
+
+
+ -- inner join
+
+ select Consulta.PacienteID, Paciente.Nome, Medico.Nome from Consulta -- campo desejado
+ inner join Paciente on Paciente.PacienteID = Consulta.PacienteID  -- caminho
+ inner join Medico on Medico.MedicoID = Consulta.MedicoID-- OBS: tem de ter igualdade entre as tabelas
+ 
+
+ 
+ 
+ where -- da para localizar um dado especifico 

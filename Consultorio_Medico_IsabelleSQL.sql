@@ -96,7 +96,7 @@ FOREIGN KEY (AutorID) REFERENCES Autores(AutorID)
  ('Alergista')
 
  INSERT INTO Consulta VALUES
- (1,9,'11/05/2024','Trazer o resultado do  exame de sangue')
+ (1,9,'11/05/2024','Trazer o resultado do exame de sangue')
 
 
  select * from Paciente

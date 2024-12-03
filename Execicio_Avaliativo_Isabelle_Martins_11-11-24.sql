@@ -1,5 +1,8 @@
 
+use master
+go
 
+drop database CadastroClientes
 -- Atividade Avaliativa 11/11/2024
 
 

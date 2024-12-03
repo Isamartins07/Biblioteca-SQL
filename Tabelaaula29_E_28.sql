@@ -1,0 +1,22 @@
+USE MASTER
+GO
+
+-- EXERCICIO ALA 28/11 MVC
+
+CREATE DATABASE DBVENDAS
+GO
+
+USE DBVENDAS
+GO
+
+CREATE TABLE Vendas (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Produto NVARCHAR(100),
+    Descricao NVARCHAR(MAX),
+    DataVenda DATE,
+    Valor DECIMAL(18,2)
+);
+
+SELECT * FROM Vendas
+
+drop database BDVENDAS
